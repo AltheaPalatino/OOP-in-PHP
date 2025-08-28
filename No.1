@@ -1,0 +1,27 @@
+<?php
+class Rectangle {
+    public $width;
+    public $height;
+
+    public function __construct($width = 1, $height = 1) {
+        $this->width = $width;
+        $this->height = $height;
+    }
+
+    public function getArea() {
+        return $this->width * $this->height;
+    }
+
+    public function getPerimeter() {
+        return 2 * ($this->width + $this->height);
+    }
+}
+
+$rect1 = new Rectangle();
+echo "Default Rectangle Area: " . $rect1->getArea() . "\n";
+echo "Default Rectangle Perimeter: " . $rect1->getPerimeter() . "\n";
+
+$rect2 = new Rectangle(5, 3);
+echo "Rectangle Area: " . $rect2->getArea() . "\n";
+echo "Rectangle Perimeter: " . $rect2->getPerimeter() . "\n";
+?>
